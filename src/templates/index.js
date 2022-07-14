@@ -19,6 +19,10 @@ const IndexPage = () => {
   const [blogPosts, setBlogPosts] = useState([]);
   const { slug } = useParams();
 
+  const locale = navigator.language;
+  const language = locale.substring(0, 2);
+  console.log({ language });
+
   let menuItems = useMenuItems();
 
   useEffect(() => {
@@ -28,7 +32,7 @@ const IndexPage = () => {
           "landing-page",
           slug || "landing-page-with-components",
           {
-            locale: "en",
+            locale: language,
           }
         );
         setPage(page.data.data);
