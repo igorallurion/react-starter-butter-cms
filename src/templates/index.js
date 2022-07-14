@@ -21,7 +21,6 @@ const IndexPage = () => {
 
   const locale = navigator.language;
   const language = locale.substring(0, 2);
-  console.log({ language });
 
   let menuItems = useMenuItems();
 
